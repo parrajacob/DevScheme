@@ -2,6 +2,25 @@
 
 	new WOW().init();
 
+	var topOfOthDiv = $("#about").offset().top;
+
+	// hide .navbar first
+	$(".navbar").hide();
+	
+	// fade in .navbar
+	
+	$(window).scroll(function () {
+            // set distance user needs to scroll before we fadeIn navbar
+            if ($(this).scrollTop() > topOfOthDiv - 20) {
+            	$('.navbar').fadeIn();
+            } else {
+            	$('.navbar').fadeOut();
+            }
+        });
+
+
+	
+
 	jQuery(window).load(function() { 
 		jQuery("#preloader").delay(100).fadeOut("slow");
 		jQuery("#load").delay(100).fadeOut("slow");
