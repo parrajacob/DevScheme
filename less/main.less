@@ -14,12 +14,17 @@
 }
 
 
-.whites a {
-	color: white;
-	font-size: 1.5em;
-	font-weight: bold;
+.whites {
 
+	color: white;
+	a {
+		color: white;
+		font-size: 1.5em;
+		font-weight: bold;
+
+	}
 }
+
 
 .title {
 	margin-top: 5%;
@@ -28,4 +33,15 @@
 
 .block {
 	display: block;
+}
+
+
+.custom_padding {
+
+	padding-top: 40px;
+
+
+	@media (max-width: 980px) { 
+		padding-top: 5px;
+	}
 }

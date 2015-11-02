@@ -63,22 +63,30 @@
 	<section id="intro" class="intro">
 
 
-		<div class="col-md-4">
+		<div class="col-md-4 custom_padding">
 			<h1 class="text-center">DevScheme</h1>
 		</div>
 
-		<div class="col-md-4">
+		<div class="col-md-4 custom_padding">
 
-			<h1 class="text-center title">DevScheme</h1>
+			<h1 class="text-center title whites">DevScheme</h1>
 			<div class="text-center">
-				<img src="img/logo.png" alt="" class="" />
+				<img src="img/logowhite.png" alt="" class="" />
 			</div>
 
-			
 		</div>
-
-		<div class="col-md-4">
-			<h1 class="text-center">DevScheme</h1>
+		<div class="col-md-4 custom_padding">
+			
+			
+			<div class="head-wrap shift-text">
+				<div class="text-editor-wrap">
+					<div class="title-bar"><span class="">DevScheme — bash — 80x<span class="terminal-height">15</span></span></div>
+					<div class="text-body">
+						$ <span id="typed">Contact DevScheme Now!</span>
+					</div>
+				</div>
+				
+			</div>
 
 			<ul class="text-center list-unstyled navbar-nav">
 				<li class="whites block"><a href="#about">About</a></li></br>
@@ -88,6 +96,9 @@
 				<li class="whites block"><a href="#contact">Contact</a></li>
 
 			</ul>
+
+
+
 		</div>
 		
 
@@ -451,8 +462,48 @@
     <script src="js/jquery.easing.min.js"></script>	
     <script src="js/jquery.scrollTo.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/typed.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.js"></script>
+
+
+
+    <script>
+    	$(function(){
+
+    		$("#typed").typed({
+    			strings: ["echo 'About';", "console.log('Team');", "print 'Services'", "puts 'Portfolio'", "Response.Write('Contact')", "Contact DevScheme Now!"],
+    			typeSpeed: 30,
+    			callback: function(){
+    				shift();
+    			}
+    		});
+
+    	});
+    	function shift(){
+    		$(".head-wrap").addClass("shift-text");
+    		terminalHeight();
+    	}
+
+    	function terminalHeight(){
+    		var termHeight = $(".terminal-height");
+    		var value = termHeight.text();
+    		value = parseInt(value);
+    		setTimeout(function(){
+    			if (value > 10){
+    				value = value-1;
+    				this.txtValue = value.toString();
+    				termHeight.text(this.txtValue);
+    				self.terminalHeight();
+    			}
+    			else{
+    				clearTimeout();
+    			}
+    		}, 10);
+    	}
+    </script>
+
+
 
 </body>
 
