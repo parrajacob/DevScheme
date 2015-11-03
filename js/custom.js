@@ -1,11 +1,14 @@
 (function ($) {
 
-	terminalanimation();
 
-
-	new WOW().init();
-
-	var topOfOthDiv = $("#about").offset().top;
+	if ($(window).width() < 767) {
+		//alert('Less than 767');
+		$(".custommenu").hide();
+	}
+	else {
+		//alert('More than 767');
+		terminalanimation();
+		var topOfOthDiv = $("#service").offset().top;
 
 	// hide .navbar first
 	$(".navbar").hide();
@@ -21,10 +24,20 @@
             }
         });
 
-	jQuery(window).load(function() { 
-		jQuery("#preloader").delay(100).fadeOut("slow");
-		jQuery("#load").delay(100).fadeOut("slow");
-	});
+}
+
+
+
+
+
+
+new WOW().init();
+
+
+jQuery(window).load(function() { 
+	jQuery("#preloader").delay(100).fadeOut("slow");
+	jQuery("#load").delay(100).fadeOut("slow");
+});
 
 
 	//jQuery to collapse the navbar on scroll
@@ -70,27 +83,30 @@ function terminalanimation () {
 	var string_num = 0;
 
 	$("#typed").typed({
-		strings: ["echo 'About';", "console.log('Team');", "print 'Services';", "puts 'Portfolio';", "Response.Write('Contact');", "Contact DevScheme Now!"],
-		typeSpeed: 30,
+		strings: ["print 'Services';", "puts 'Portfolio';","console.log('Team');","echo 'About Us';" ,  "Response.Write('Contact');", "Contact DevScheme Now!"],
+		typeSpeed: 1,
 		onStringTyped: function() {
 			shift();
 
 			string_num++;
 
 			if (string_num == 1) {
-				$(".aboutmenu").fadeIn(2000);
+				$(".servicemenu").fadeIn(2000);
+				
 			}
 
 			else if (string_num == 2) {
-				$(".teammenu").fadeIn(2000);
+				$(".portfoliomenu").fadeIn(2000);
+				
 			}
 
 			else if (string_num == 3) {
-				$(".servicemenu").fadeIn(2000);
+				$(".teammenu").fadeIn(2000);
 			}
 
 			else if (string_num == 4) {
-				$(".portfoliomenu").fadeIn(2000);
+				
+				$(".aboutmenu").fadeIn(2000);
 			}
 
 			else if (string_num == 5) {

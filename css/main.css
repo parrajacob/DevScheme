@@ -37,6 +37,33 @@
     padding-top: 5px;
   }
 }
-.btn {
-  align: center;
+@media (max-width: 767px) {
+  .custom_padding {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 465px) {
+  .custom_padding {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 320px) {
+  .custom_padding {
+    padding-top: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .maintitle {
+    display: none;
+  }
+}
+@media (max-width: 465px) {
+  .maintitle {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .maintitle {
+    display: none;
+  }
 }

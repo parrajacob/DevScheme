@@ -336,16 +336,15 @@ hr {
 }
 
 
-
 /* ===========================
 --- Intro
 ============================ */
 
 .intro {
 	width:100%;
-	position:relative;
-	
-	background: url(../img/mainbg.jpg) no-repeat center center;
+  position:relative;
+
+  background: url(../img/mainbg.jpg) no-repeat center center;
 }
 
 #intro.intro {
@@ -389,6 +388,8 @@ hr {
 	color: #fff;
 	text-shadow: -1px 1px 1px #000;
 }
+
+
 
 
 /* ===========================
@@ -791,8 +792,25 @@ Parallax
     font-size: 25px;
   }
 
+  .widget-contact {
+    text-align: center;
+  }
+
+  .company-social {
+    text-align: center;
+  }
+
+  .sendbtn {
+    width: auto;
+    height: auto;
+    text-align: center;
+  }
+
 
 }
+
+
+
 @media (max-width:768px) {
 	
 	.team.boxed-grey {
@@ -803,7 +821,21 @@ Parallax
 		margin-bottom: 30px;
 	}
 
-	
+  .widget-contact {
+    text-align: center;
+  }
+
+  .company-social {
+    text-align: center;
+  }
+
+  .sendbtn {
+    width: auto;
+    height: auto;
+    text-align: center;
+  }
+
+
 }
 
 @media (max-width:480px) {
@@ -829,8 +861,28 @@ Parallax
     border-radius: 50%;
     font-size: 20px;
   }
+
+  .widget-contact {
+    text-align: center;
+  }
+
+  .company-social {
+    text-align: center;
+  }
+
+  .sendbtn {
+    width: auto;
+    height: auto;
+    text-align: center;
+  }
+  .intro {
+    height: 100%;
+  }
 }
 
+.imgdev {
+  width: 100%;
+}
 
 .head-wrap {
   margin: 30px auto 30px;
@@ -1031,3 +1083,7 @@ Parallax
                                                                                     color: #333; }
                                                                                     .btn p a:hover {
                                                                                       color: #CCC; }
+
+
+
+
