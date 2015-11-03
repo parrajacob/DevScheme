@@ -37,7 +37,7 @@
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
 					<i class="fa fa-bars"></i>
 				</button>
-				<a class="navbar-brand" href="index.html">
+				<a class="navbar-brand" href="#intro">
 					<h1>DevScheme</h1>
 				</a>
 			</div>
@@ -63,11 +63,9 @@
 	<section id="intro" class="intro">
 
 
-		<div class="col-md-4 custom_padding">
-			<h1 class="text-center">DevScheme</h1>
-		</div>
+		
 
-		<div class="col-md-4 custom_padding">
+		<div class="col-md-5 custom_padding">
 
 			<h1 class="text-center title whites">DevScheme</h1>
 			<div class="text-center">
@@ -75,7 +73,7 @@
 			</div>
 
 		</div>
-		<div class="col-md-4 custom_padding">
+		<div class="col-md-7 custom_padding">
 			
 			
 			<div class="head-wrap shift-text">
@@ -88,16 +86,25 @@
 				
 			</div>
 
-			<ul class="text-center list-unstyled navbar-nav">
-				<li class="whites block"><a href="#about">About</a></li></br>
-				<li class="whites block"><a href="#team">Team</a></li></br>
-				<li class="whites block"><a href="#service">Services</a></li></br>
-				<li class="whites block"><a href="#portfolio">Portfolio</a></li></br>
-				<li class="whites block"><a href="#contact">Contact</a></li>
+			<div class="center2">
 
-			</ul>
+				<ul class="text-center list-unstyled navbar-nav center2">
+					<li class="whites center2 aboutmenu"><a class="nopadding" href="#about">About</a></li>
+					<li class="whites center2 teammenu"><a class="nopadding" href="#team">Team</a></li>
+					<li class="whites center2 servicemenu"><a class="nopadding" href="#service">Services</a></li>
+					<li class="whites center2 portfoliomenu"><a class="nopadding" href="#portfolio">Portfolio</a></li>
+					<li class="whites center2 contactmenu"><a class="nopadding" href="#contact">Contact</a></li>
+					
+					<a href="#about" id="tobottom" class="btn btn-circle">
+						<i class="fa fa-angle-double-down"></i>
+					</a>
 
 
+				</ul>
+
+				
+
+			</div>
 
 		</div>
 		
@@ -463,47 +470,9 @@
     <script src="js/jquery.scrollTo.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/typed.js"></script>
+
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.js"></script>
-
-
-
-    <script>
-    	$(function(){
-
-    		$("#typed").typed({
-    			strings: ["echo 'About';", "console.log('Team');", "print 'Services'", "puts 'Portfolio'", "Response.Write('Contact')", "Contact DevScheme Now!"],
-    			typeSpeed: 30,
-    			callback: function(){
-    				shift();
-    			}
-    		});
-
-    	});
-    	function shift(){
-    		$(".head-wrap").addClass("shift-text");
-    		terminalHeight();
-    	}
-
-    	function terminalHeight(){
-    		var termHeight = $(".terminal-height");
-    		var value = termHeight.text();
-    		value = parseInt(value);
-    		setTimeout(function(){
-    			if (value > 10){
-    				value = value-1;
-    				this.txtValue = value.toString();
-    				termHeight.text(this.txtValue);
-    				self.terminalHeight();
-    			}
-    			else{
-    				clearTimeout();
-    			}
-    		}, 10);
-    	}
-    </script>
-
-
 
 </body>
 

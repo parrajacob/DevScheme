@@ -855,7 +855,7 @@ Parallax
     transition: all 0.5s ease-out; }
 
     .shift-text {
-      margin: 80px auto 110px; }
+      margin: 80px auto 10px; }
       .shift-text .text-body {
         height: 120px; }
         .shift-text .tagline {
@@ -1000,7 +1000,7 @@ Parallax
                                                                         display: inline-block;
                                                                         position: relative;
                                                                         margin: 0 10px 5px;
-                                                                        text-align: left;
+                                                                        text-align: center;
                                                                         vertical-align: top; }
                                                                         @media screen and (max-width: 500px) {
                                                                           .btn {

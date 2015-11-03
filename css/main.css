@@ -8,6 +8,10 @@
   margin: 0 auto;
   width: 80%;
 }
+.center2 {
+  margin: 0 auto;
+  width: 100%;
+}
 .whites {
   color: white;
 }
@@ -16,12 +20,14 @@
   font-size: 1.5em;
   font-weight: bold;
 }
+.nopadding {
+  padding: 0;
+  margin: 0;
+  display: block;
+}
 .title {
   margin-top: 5%;
   font-size: 3em;
-}
-.block {
-  display: block;
 }
 .custom_padding {
   padding-top: 40px;
@@ -30,4 +36,7 @@
   .custom_padding {
     padding-top: 5px;
   }
+}
+.btn {
+  align: center;
 }

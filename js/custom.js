@@ -1,5 +1,8 @@
 (function ($) {
 
+	terminalanimation();
+
+
 	new WOW().init();
 
 	var topOfOthDiv = $("#about").offset().top;
@@ -52,3 +55,78 @@
 	});
 
 })(jQuery);
+
+
+
+function terminalanimation () {
+	$('.aboutmenu').hide();
+	$('.teammenu').hide();
+	$('.servicemenu').hide();
+	$('.portfoliomenu').hide();
+	$('.contactmenu').hide();
+	$('#tobottom').hide();
+
+
+	var string_num = 0;
+
+	$("#typed").typed({
+		strings: ["echo 'About';", "console.log('Team');", "print 'Services';", "puts 'Portfolio';", "Response.Write('Contact');", "Contact DevScheme Now!"],
+		typeSpeed: 30,
+		onStringTyped: function() {
+			shift();
+
+			string_num++;
+
+			if (string_num == 1) {
+				$(".aboutmenu").fadeIn(2000);
+			}
+
+			else if (string_num == 2) {
+				$(".teammenu").fadeIn(2000);
+			}
+
+			else if (string_num == 3) {
+				$(".servicemenu").fadeIn(2000);
+			}
+
+			else if (string_num == 4) {
+				$(".portfoliomenu").fadeIn(2000);
+			}
+
+			else if (string_num == 5) {
+				$(".contactmenu").fadeIn(2000);
+			}
+
+			else {
+				$("#tobottom").fadeIn(2000);
+			}
+
+		},
+		callback: function(){
+			shift();
+
+		}
+	});
+}
+
+function shift(){
+	$(".head-wrap").addClass("shift-text");
+	terminalHeight();
+}
+
+function terminalHeight(){
+	var termHeight = $(".terminal-height");
+	var value = termHeight.text();
+	value = parseInt(value);
+	setTimeout(function(){
+		if (value > 10){
+			value = value-1;
+			this.txtValue = value.toString();
+			termHeight.text(this.txtValue);
+			self.terminalHeight();
+		}
+		else{
+			clearTimeout();
+		}
+	}, 10);
+}
