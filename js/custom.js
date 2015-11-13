@@ -1,13 +1,78 @@
 (function ($) {
 
+	 localStorage.removeItem("language"); // name is the key
 
-	if ($(window).width() < 767) {
+	 
+	 var stored = localStorage.getItem("language");
+	 console.log(stored);
+
+	 if(stored == null){
+	 	swal({   
+
+	 		title: "Welcome to DevScheme.com",   
+	 		text: "Please confirm your language:",   
+	 		imageUrl: "img/logoblack.png", 
+	 		allowOutsideClick: true,
+	 		showCancelButton: true,
+	 		animation: true,   
+	 		confirmButtonColor: "#DD6B55",   
+	 		confirmButtonText: "Español",
+	 		cancelButtonColor: "#DD6B55",   
+	 		cancelButtonText: "English",   
+	 		closeOnConfirm: false,   
+	 		closeOnCancel: false 
+	 	}, 
+	 	function(isConfirm){  
+	 		if (isConfirm) {    
+	 			swal({   title: "DevScheme", imageUrl: "img/logoblack.png",  text: "Configurando a español",   timer: 2000,   showConfirmButton: false });  
+			localStorage.setItem("language", "Spanish"); //name is the key, GeekChamp is the value
+			toSpanish();
+		} 
+		else 
+		{     
+			swal({   title: "DevScheme", imageUrl: "img/logoblack.png",  text: "Setting Language",   timer: 2000,   showConfirmButton: false }); 
+		localStorage.setItem("language", "English"); //name is the key, GeekChamp is the value
+		
+
+	} 
+});
+
+
+	 }
+
+	 else if (stored == "Spanish")
+	 {
+	 	toSpanish();
+	 	//console.log("Spanish Success");
+	 }
+
+	 else if (stored == "English")
+	 {
+	 	
+	 	//console.log("English Success");
+	 }
+
+
+
+
+	 if ($(window).width() < 767) {
 		//alert('Less than 767');
 		$(".custommenu").hide();
 	}
 	else {
 		//alert('More than 767');
-		terminalanimation();
+		if (stored == "English")
+		{
+			terminalanimation();
+
+		}
+		if (stored == "Spanish")
+		{
+			terminalanimationSpanish();
+		}
+
+
+
 		var topOfOthDiv = $("#service").offset().top;
 
 	// hide .navbar first
@@ -125,6 +190,60 @@ function terminalanimation () {
 	});
 }
 
+function terminalanimationSpanish() {
+	$('.aboutmenu').hide();
+	$('.teammenu').hide();
+	$('.servicemenu').hide();
+	$('.portfoliomenu').hide();
+	$('.contactmenu').hide();
+	$('#tobottom').hide();
+
+
+	var string_num = 0;
+
+	$("#typed").typed({
+		strings: ["print 'Servicios';", "puts 'Portfolio';","console.log('Equipo');","echo 'Sobre Nosotros';" ,  "Response.Write('Contactenos');", "Contactense con DevScheme Ahora!"],
+		typeSpeed: 1,
+		onStringTyped: function() {
+			shift();
+
+			string_num++;
+
+			if (string_num == 1) {
+				$(".servicemenu").fadeIn(2000);
+				
+			}
+
+			else if (string_num == 2) {
+				$(".portfoliomenu").fadeIn(2000);
+				
+			}
+
+			else if (string_num == 3) {
+				$(".teammenu").fadeIn(2000);
+			}
+
+			else if (string_num == 4) {
+				
+				$(".aboutmenu").fadeIn(2000);
+			}
+
+			else if (string_num == 5) {
+				$(".contactmenu").fadeIn(2000);
+			}
+
+			else {
+				$("#tobottom").fadeIn(2000);
+			}
+
+		},
+		callback: function(){
+			shift();
+
+		}
+	});
+}
+
 function shift(){
 	$(".head-wrap").addClass("shift-text");
 	terminalHeight();
@@ -145,4 +264,18 @@ function terminalHeight(){
 			clearTimeout();
 		}
 	}, 10);
+}
+
+
+function toSpanish(){
+	terminalanimationSpanish();
+	document.getElementById("spanishServices").innerHTML = "Servicios";
+
+
+}
+
+function toEnglish(){
+
+
+
 }

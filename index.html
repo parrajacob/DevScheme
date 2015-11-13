@@ -22,6 +22,7 @@
 	<!-- Main theme CSS -->
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
+	<link href="css/sweetalert.css" rel="stylesheet">
 
 </head>
 
@@ -30,6 +31,8 @@
 	<div id="preloader">
 		<div id="load"></div>
 	</div>
+
+	<div style="display:none" id="popup"> </div>
 
 	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
 		<div class="container">
@@ -51,7 +54,7 @@
 					<li><a href="#team">Team</a></li>
 					<li><a href="#about">About Us</a></li>
 					<li><a href="#contact">Contact</a></li>
-					
+
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -63,7 +66,7 @@
 	<section id="intro" class="intro">
 
 
-		
+
 
 		<div class="col-sm-5 col-md-5 col-lg-5 custom_padding">
 
@@ -74,8 +77,8 @@
 
 		</div>
 		<div class="col-sm-7 col-md-7 col-lg-7 custom_padding custommenu">
-			
-			
+
+
 			<div class="head-wrap shift-text">
 				<div class="text-editor-wrap">
 					<div class="title-bar"><span class="">DevScheme — bash — 80x<span class="terminal-height">15</span></span></div>
@@ -83,20 +86,20 @@
 						$ <span id="typed">Contact DevScheme Now!</span>
 					</div>
 				</div>
-				
+
 			</div>
 
 			<div class="center2">
 
 				<ul class="text-center list-unstyled navbar-nav center2">
-					
-					
-					<li class="whites center2 servicemenu"><a class="nopadding" href="#service">Services</a></li>
+
+
+					<li class="whites center2 servicemenu"><a class="nopadding" id="spanishServices" href="#service">Services</a></li>
 					<li class="whites center2 portfoliomenu"><a class="nopadding" href="#portfolio">Portfolio</a></li>
 					<li class="whites center2 teammenu"><a class="nopadding" href="#team">Team</a></li>
 					<li class="whites center2 aboutmenu"><a class="nopadding" href="#about">About Us</a></li>
 					<li class="whites center2 contactmenu"><a class="nopadding" href="#contact">Contact</a></li>
-					
+
 					<a href="#service" id="tobottom" class="btn btn-circle">
 						<i class="fa fa-angle-double-down"></i>
 					</a>
@@ -104,12 +107,12 @@
 
 				</ul>
 
-				
+
 
 			</div>
 
 		</div>
-		
+
 
 	</section>
 	<!-- /Section: intro -->
@@ -240,7 +243,7 @@
 
 
 	<!-- Section: team -->
-	<section id="team" class="home-section text-center">
+	<section id="team" class="home-section text-center bg-gray">
 		<div class="heading-about">
 			<div class="container">
 				<div class="row">
@@ -273,7 +276,7 @@
 								<div class="inner">
 									<h5>Jacob Parra</h5>
 									<p class="subtitle">Front-End Developer</p>
-									<div class="avatar center"><img src="img/team/3.jpg" alt="" class="img-responsive img-circle" /></div>
+									<div class="avatar center"><img src="img/team/jacob.jpg" alt="" class="img-responsive img-circle" /></div>
 
 								</div>
 							</div>
@@ -285,7 +288,7 @@
 								<div class="inner">
 									<h5>Omar Reyes</h5>
 									<p class="subtitle">Back-End Developer</p>
-									<div class="avatar center"><img src="img/team/4.jpg" alt="" class="img-responsive img-circle" /></div>
+									<div class="avatar center"><img src="img/team/omar.jpg" alt="" class="img-responsive img-circle" /></div>
 
 								</div>
 							</div>
@@ -300,7 +303,7 @@
 
 
 	<!-- Section: about -->
-	<section id="about" class="home-section text-center bg-gray">
+	<section id="about" class="home-section text-center">
 
 		<div class="heading-about">
 			<div class="container">
@@ -325,8 +328,17 @@
 			</div>
 
 			<div class="row">
-				<div class="col-lg-12">
-					<p>Hello</p>
+				<div class="col-lg-6 col-lg-offset-3">
+
+					<!--You can call us entrepreneurs, business men, programmers, geeks, or simply people that love what they do.-->
+
+					<h4>"Having full time jobs is not enough for us"</h4>
+
+					<p>DevScheme is here to plan out the building or rebuilding of your computing solutions.</p>
+
+					<p>Here at DevScheme we pride ourselves in providing better than satisfactory results while following exemplary customer service. We are a development firm that provides solutions which are implemented with the most current and future proof technologies. So by all means let your creative juices flow and feel free to just be creative, we will try to keep up!</p>
+
+					<p>Call us entrepreneurs, programmers, geeks, or simply people whose passion is their career. DevScheme started in a computer science course at Arizona State University, where two graduates, who currently have full time jobs, have joined forces to make your computing solutions top notch. We pride ourselves in constantly learning new skills and adapting to the very fast paced world of technology.</p>
 				</div>
 			</div>
 
@@ -471,7 +483,7 @@
     <script src="js/jquery.scrollTo.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/typed.js"></script>
-
+    <script src="js/sweetalert.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.js"></script>
 
