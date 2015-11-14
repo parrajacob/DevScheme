@@ -626,7 +626,6 @@ Parallax
 .btn-circle {
   width: 70px;
   height: 70px;
-  margin-top: 15px;
   padding: 7px 16px;
   border: 2px solid #fff;
   border-radius: 50%;
@@ -1086,7 +1085,7 @@ Parallax
                                                                       .btn {
                                                                         display: inline-block;
                                                                         position: relative;
-                                                                        margin: 0 10px 5px;
+                                                                        
                                                                         text-align: center;
                                                                         vertical-align: top; }
                                                                         @media screen and (max-width: 500px) {

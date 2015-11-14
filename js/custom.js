@@ -1,6 +1,6 @@
 (function ($) {
 
-	 localStorage.removeItem("language"); // name is the key
+	 //localStorage.removeItem("language"); // name is the key
 
 	 
 	 var stored = localStorage.getItem("language");
@@ -30,10 +30,9 @@
 		} 
 		else 
 		{     
-			swal({   title: "DevScheme", imageUrl: "img/logoblack.png",  text: "Setting Language",   timer: 2000,   showConfirmButton: false }); 
+			swal({   title: "DevScheme", imageUrl: "img/logoblack.png",  text: "Setting Language",   timer: 200,   showConfirmButton: false }); 
 		localStorage.setItem("language", "English"); //name is the key, GeekChamp is the value
-		
-
+		terminalanimation();
 	} 
 });
 
@@ -202,7 +201,7 @@ function terminalanimationSpanish() {
 	var string_num = 0;
 
 	$("#typed").typed({
-		strings: ["print 'Servicios';", "puts 'Portfolio';","console.log('Equipo');","echo 'Sobre Nosotros';" ,  "Response.Write('Contactenos');", "Contactense con DevScheme Ahora!"],
+		strings: ["print 'Servicios';", "puts 'Portafolio';","console.log('El Equipo');","echo 'Sobre Nosotros';" ,  "Response.Write('Comuníquese');", "Comuníquese con DevScheme Ahora!"],
 		typeSpeed: 1,
 		onStringTyped: function() {
 			shift();
@@ -270,7 +269,54 @@ function terminalHeight(){
 function toSpanish(){
 	terminalanimationSpanish();
 	document.getElementById("spanishServices").innerHTML = "Servicios";
-
+	document.getElementById("spanishPortfolio").innerHTML = "Portafolio";
+	document.getElementById("spanishTeam").innerHTML = "El Equipo";
+	document.getElementById("spanishAbout").innerHTML = "Sobre Nosotros";
+	document.getElementById("spanishContact").innerHTML = "Comuníquese";
+	document.getElementById("spanishnavHome").innerHTML = "Inicio";
+	document.getElementById("spanishnavServices").innerHTML = "Servicios";
+	document.getElementById("spanishnavPortfolio").innerHTML = "Portafolio";
+	document.getElementById("spanishnavTeam").innerHTML = "El Equipo";
+	document.getElementById("spanishnavAbout").innerHTML = "Sobre Nosotros";
+	document.getElementById("spanishnavContact").innerHTML = "Comuníquese";
+	document.getElementById("spanishService1").innerHTML = "Servicios Disponibles";
+	document.getElementById("spanishService2").innerHTML = "SOLUCIONES DE BASES DE DATOS";
+	document.getElementById("spanishService3").innerHTML = "Creación y encargo de bases de datos. El cuidado por la seguridad de sus datos utilizando las diversas prácticas que dominan en la industria. El desarrollo de APIs (interfaces de programación de aplicaciones) para facilitar el proceso de acceso a la base de datos por diseñadores de front-end.";
+	document.getElementById("spanishService4").innerHTML = "DESARROLLO de sitios de WEB";
+	document.getElementById("spanishService5").innerHTML = "Desarrollar diseños de sitios web personalizados o añadirle a un diseño existente de su elección. El desarrollo de sitios web sensibles para su mobil que no sólo le dan un experiencia agradada al usuario, sino que también facilitan el proceso de actualización para los administradores de back-end.";
+	document.getElementById("spanishService6").innerHTML = "DESARROLLO de Aplicaciones móviles";
+	document.getElementById("spanishService7").innerHTML = "Desarrollar aplicaciones en ambas plataformas mobil, Android y iOS. Asegúrandonos que las aplicaciones sean eficientes y que sean adaptable a cambios, manteniendo una estrecha relación de trabajo con el cliente. Nos enfocamos en la integración de la seguridad y en proveer una experiencia de usuario única.";
+	document.getElementById("spanishPortfolio1").innerHTML = "Nuestro Portafolio";
+	document.getElementById("spanishPortfolio2").innerHTML = "Proyectos Recientes";
+	document.getElementById("spanishPortfolio3").innerHTML = "Top Dog Daycare";
+	document.getElementById("spanishPortfolio4").innerHTML = "Diseño y Base de Datos";
+	document.getElementById("spanishPortfolio5").innerHTML = "Spot You";
+	document.getElementById("spanishPortfolio6").innerHTML = "Diseño y Base de Datos";
+	document.getElementById("spanishPortfolio7").innerHTML = "My Wedding Page";
+	document.getElementById("spanishPortfolio8").innerHTML = "Diseño y Base de Datos";
+	document.getElementById("spanishTeam1").innerHTML = "El Equipo";
+	document.getElementById("spanishTeam2").innerHTML = "Diseñador de sitios e applicaciones y administrador de visuales";
+	document.getElementById("spanishTeam3").innerHTML = "Administrador de base de datos y funciones internas";
+	document.getElementById("spanishAbout1").innerHTML = "Sobre Nosotros";
+	document.getElementById("spanishAbout2").innerHTML = "\"El tener puestos de trabajo a tiempo completo no es suficiente para nosotros\"";
+	document.getElementById("spanishAbout3").innerHTML = "DevScheme facilita y planea la construcción o reconstrucción de sus soluciones de computación.";
+	document.getElementById("spanishAbout4").innerHTML = "Aquí en DevScheme nos enfocamos en ofrecer resultados mejor que satisfactorios, mientras dandole servicio ejemplar al cliente. Somos una empresa de desarrollo que proporciona soluciones que se implementan con las tecnologías más actuales y futuras. Así que dejen que sus pensamientos creativos empiesen y se sienten libres para simplemente ser creativos, trataremos de mantener su ritmo!";
+	document.getElementById("spanishAbout5").innerHTML = "Llámenos emprendedores, programadores, los geeks, o simplemente las personas cuya pasión es su carrera. DevScheme comenzó en un curso de ingeniería en programación en la Universidad Estatal de Arizona, donde dos graduados, que actualmente tienen empleos de tiempo completo, han unido sus fuerzas para asegurarse que sus soluciones de computación sean de primera clase. Nos enfocamos en constante aprendizaje de nuevas habilidades y en adaptarnos al mundo de la tecnología que constantemente esta cambiando.";
+	document.getElementById("spanishContact1").innerHTML = "Pongase en Contacto";
+	document.getElementById("spanishContact2").innerHTML = "Nombre";
+	document.getElementById("spanishContact3").innerHTML = "Correo Electronico";
+	document.getElementById("spanishContact4").innerHTML = "Numero de Telephono";
+	document.getElementById("spanishContact5").innerHTML = "Mensaje";
+	document.getElementById("btnContactUs").innerHTML = "Envie Mensaje";
+	document.getElementById("spanishContact6").innerHTML = "Correo";
+	document.getElementById("spanishContact7").innerHTML = "Numero";
+	document.getElementById("spanishContact8").innerHTML = "Localización";
+	document.getElementById("spanishContact9").innerHTML = "Ya estamos en las redes sociales";
+	$('#name').attr('placeholder','Su Nombre');
+	$('#email').attr('placeholder','Su Correo');
+	$('#number').attr('placeholder','Su Numero');
+	$('#emessage').attr('placeholder','Su Mensaje');
+	document.getElementById("spanishFooter1").innerHTML = "Derechos de Autor 2015 - DevScheme LLC. Reservados todos los derechos.";
 
 }
 
