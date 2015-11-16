@@ -1,6 +1,6 @@
 (function ($) {
 
-	 //localStorage.removeItem("language"); // name is the key
+	 localStorage.removeItem("language"); // name is the key
 
 	 
 	 var stored = localStorage.getItem("language");

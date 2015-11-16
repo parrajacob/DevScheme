@@ -58,7 +58,7 @@ a:focus {
 
 .navbar {
   margin-bottom: 0;
-  border-bottom: 1px solid rgba(255,255,255,.3);
+  border-bottom: 1px solid rgba(255,255,255,.2);
   
 }
 
@@ -83,7 +83,7 @@ a:focus {
 }
 
 .nav.navbar-nav {
-  background-color: rgba(255,255,255,.4);
+  background-color: transparent;
 }
 
 .navbar-custom.top-nav-collapse .nav.navbar-nav {
@@ -94,7 +94,7 @@ a:focus {
 .navbar-custom ul.nav li a {
 	font-size: 12px;
 	letter-spacing: 1px;
-  color: #444;
+  color: #F7484E;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -103,7 +103,7 @@ a:focus {
  -webkit-transition: all .2s ease-in-out;
  -moz-transition: all .2s ease-in-out;
  transition: all .2s ease-in-out;
- color: #fff;
+ color: #F7484E;
 }
 
 .navbar-custom ul.nav ul.dropdown-menu {
@@ -141,13 +141,13 @@ a:focus {
 .navbar-custom .nav li a:focus,
 .navbar-custom .nav li.active {
   outline: 0;
-  background-color: rgba(255,255,255,.2);
+  background-color: white;
 }
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus,
 .navbar-custom .nav li.active {
   outline: 0;
-  background-color: rgba(255,255,255,.2);
+  background: white;
 }
 
 .navbar-toggle {
@@ -191,7 +191,7 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 }
 
 footer {
-  background-color: #67b0d1;
+  background-color: #F7484E;
 }
 
 .btn-skin {
@@ -329,13 +329,27 @@ hr {
 	background: #575757;
 }
 
+.bg-light {
+  background: #F5F5F5;
+}
+
+.trans {
+  background: transparent;
+}
+
 /* --- section color var --- */
 
 .text-light {
 	color: #fff;
 }
 
+.text-dark {
+  color: black;
+}
 
+.text-red {
+  color: #F7484E;
+}
 /* ===========================
 --- Intro
 ============================ */
@@ -345,6 +359,11 @@ hr {
   position:relative;
 
   background: url(../img/mainbg.jpg) no-repeat center center;
+}
+
+.bk {
+
+  background: url(../img/contactpic.jpg) no-repeat center center;
 }
 
 #intro.intro {
@@ -397,8 +416,13 @@ hr {
 ============================ */
 
 .boxed-grey {
-	background: #f9f9f9;
+	background: #ffffff;
 	padding: 20px;
+}
+
+.boxed-trans {
+  background: transparent;
+  padding: 20px;
 }
 
 .team h5 {
@@ -820,6 +844,10 @@ Parallax
 	.boxed-grey {
 		margin-bottom: 30px;
 	}
+
+  .boxed-trans {
+    margin-bottom: 30px;
+  }
 
   .widget-contact {
     text-align: center;

@@ -94,3 +94,15 @@
     padding-top: 10px;
   }
 }
+#btnContactUs {
+  background: #F7484E;
+}
+#page-top > nav {
+  background: black;
+}
+#contact > div.container > div:nth-child(2) > div.col-lg-4.boxed-trans > div > address:nth-child(n+1) > a:hover {
+  color: white;
+}
+#page-top > nav > div > div.collapse.navbar-collapse.navbar-right.navbar-main-collapse > ul > li:nth-child(n+1):active {
+  background: white;
+}
