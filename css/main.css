@@ -84,3 +84,13 @@
     display: none;
   }
 }
+.portfolio-caption {
+  padding-top: 3%;
+}
+@media (max-width: 767px) and (orientation: landscape) {
+  .imgdev {
+    width: 40%;
+    margin: auto;
+    padding-top: 10px;
+  }
+}
