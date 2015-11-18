@@ -1,30 +1,30 @@
 (function ($) {
 
-	 localStorage.removeItem("language"); // name is the key
+	// localStorage.removeItem("language"); // name is the key
 
-	 
-	 var stored = localStorage.getItem("language");
-	 console.log(stored);
+	
+	var stored = localStorage.getItem("language");
+	console.log(stored);
 
-	 if(stored == null){
-	 	swal({   
+	if(stored == null){
+		swal({   
 
-	 		title: "Welcome to DevScheme.com",   
-	 		text: "Please confirm your language:",   
-	 		imageUrl: "img/logoblack.png", 
-	 		allowOutsideClick: true,
-	 		showCancelButton: true,
-	 		animation: true,   
-	 		confirmButtonColor: "#DD6B55",   
-	 		confirmButtonText: "Español",
-	 		cancelButtonColor: "#DD6B55",   
-	 		cancelButtonText: "English",   
-	 		closeOnConfirm: false,   
-	 		closeOnCancel: false 
-	 	}, 
-	 	function(isConfirm){  
-	 		if (isConfirm) {    
-	 			swal({   title: "DevScheme", imageUrl: "img/logoblack.png",  text: "Configurando a español",   timer: 2000,   showConfirmButton: false });  
+			title: "Welcome to DevScheme.com",   
+			text: "Please confirm your language:",   
+			imageUrl: "img/logoblack.png", 
+			allowOutsideClick: true,
+			showCancelButton: true,
+			animation: true,   
+			confirmButtonColor: "#DD6B55",   
+			confirmButtonText: "Español",
+			cancelButtonColor: "#DD6B55",   
+			cancelButtonText: "English",   
+			closeOnConfirm: false,   
+			closeOnCancel: false 
+		}, 
+		function(isConfirm){  
+			if (isConfirm) {    
+				swal({   title: "DevScheme", imageUrl: "img/logoblack.png",  text: "Configurando a español",   timer: 2000,   showConfirmButton: false });  
 			localStorage.setItem("language", "Spanish"); //name is the key, GeekChamp is the value
 			toSpanish();
 		} 
@@ -37,11 +37,11 @@
 });
 
 
-	 }
+	}
 
-	 else if (stored == "Spanish")
-	 {
-	 	toSpanish();
+	else if (stored == "Spanish")
+	{
+		toSpanish();
 	 	//console.log("Spanish Success");
 	 }
 
@@ -140,6 +140,7 @@ function terminalanimation () {
 	$('.teammenu').hide();
 	$('.servicemenu').hide();
 	$('.portfoliomenu').hide();
+	$('.testimonialmenu').hide();
 	$('.contactmenu').hide();
 	$('#tobottom').hide();
 
@@ -147,7 +148,7 @@ function terminalanimation () {
 	var string_num = 0;
 
 	$("#typed").typed({
-		strings: ["print 'Services';", "puts 'Portfolio';","console.log('Team');","echo 'About Us';" ,  "Response.Write('Contact');", "Contact DevScheme Now!"],
+		strings: ["print 'Services';", "puts 'Portfolio';", "show 'Testimonials';" ,"console.log('Team');","echo 'About Us';" ,  "Response.Write('Contact');", "Contact DevScheme Now!"],
 		typeSpeed: 1,
 		onStringTyped: function() {
 			shift();
@@ -165,20 +166,24 @@ function terminalanimation () {
 			}
 
 			else if (string_num == 3) {
-				$(".teammenu").fadeIn(2000);
+				$(".testimonialmenu").fadeIn(2000);
 			}
 
 			else if (string_num == 4) {
+				$(".teammenu").fadeIn(2000);
+			}
+
+			else if (string_num == 5) {
 				
 				$(".aboutmenu").fadeIn(2000);
 			}
 
-			else if (string_num == 5) {
+			else if (string_num == 6) {
 				$(".contactmenu").fadeIn(2000);
 			}
 
 			else {
-				$("#tobottom").fadeIn(2000);
+				
 			}
 
 		},
@@ -194,6 +199,7 @@ function terminalanimationSpanish() {
 	$('.teammenu').hide();
 	$('.servicemenu').hide();
 	$('.portfoliomenu').hide();
+	$('.testimonialmenu').hide();
 	$('.contactmenu').hide();
 	$('#tobottom').hide();
 
@@ -201,7 +207,7 @@ function terminalanimationSpanish() {
 	var string_num = 0;
 
 	$("#typed").typed({
-		strings: ["print 'Servicios';", "puts 'Portafolio';","console.log('El Equipo');","echo 'Sobre Nosotros';" ,  "Response.Write('Comuníquese');", "Comuníquese con DevScheme Ahora!"],
+		strings: ["print 'Servicios';", "puts 'Portafolio';", "show 'Evaluaciónes';","console.log('El Equipo');","echo 'Sobre Nosotros';" ,  "Response.Write('Comuníquese');", "Comuníquese con DevScheme Ahora!"],
 		typeSpeed: 1,
 		onStringTyped: function() {
 			shift();
@@ -219,20 +225,24 @@ function terminalanimationSpanish() {
 			}
 
 			else if (string_num == 3) {
-				$(".teammenu").fadeIn(2000);
+				$(".testimonialmenu").fadeIn(2000);
 			}
 
 			else if (string_num == 4) {
+				$(".teammenu").fadeIn(2000);
+			}
+
+			else if (string_num == 5) {
 				
 				$(".aboutmenu").fadeIn(2000);
 			}
 
-			else if (string_num == 5) {
+			else if (string_num == 6) {
 				$(".contactmenu").fadeIn(2000);
 			}
 
 			else {
-				$("#tobottom").fadeIn(2000);
+				
 			}
 
 		},
@@ -270,12 +280,14 @@ function toSpanish(){
 	terminalanimationSpanish();
 	document.getElementById("spanishServices").innerHTML = "Servicios";
 	document.getElementById("spanishPortfolio").innerHTML = "Portafolio";
+	document.getElementById("spanishTestimonial").innerHTML = "Evaluaciónes";
 	document.getElementById("spanishTeam").innerHTML = "El Equipo";
 	document.getElementById("spanishAbout").innerHTML = "Sobre Nosotros";
 	document.getElementById("spanishContact").innerHTML = "Comuníquese";
 	document.getElementById("spanishnavHome").innerHTML = "Inicio";
 	document.getElementById("spanishnavServices").innerHTML = "Servicios";
 	document.getElementById("spanishnavPortfolio").innerHTML = "Portafolio";
+	document.getElementById("spanishnavTestimonials").innerHTML = "Evaluaciónes";
 	document.getElementById("spanishnavTeam").innerHTML = "El Equipo";
 	document.getElementById("spanishnavAbout").innerHTML = "Sobre Nosotros";
 	document.getElementById("spanishnavContact").innerHTML = "Comuníquese";
@@ -294,6 +306,8 @@ function toSpanish(){
 	document.getElementById("spanishPortfolio6").innerHTML = "Diseño y Base de Datos";
 	document.getElementById("spanishPortfolio7").innerHTML = "My Wedding Page";
 	document.getElementById("spanishPortfolio8").innerHTML = "Diseño y Base de Datos";
+	document.getElementById("spanishTestimonial1").innerHTML = "Evaluaciónes de Clientes";
+
 	document.getElementById("spanishTeam1").innerHTML = "El Equipo";
 	document.getElementById("spanishTeam2").innerHTML = "Diseñador de sitios e applicaciones y administrador de visuales";
 	document.getElementById("spanishTeam3").innerHTML = "Administrador de base de datos y funciones internas";
