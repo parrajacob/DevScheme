@@ -199,7 +199,7 @@
 	<!-- /Section: services -->
 
 	<!-- Portfolio Grid Section -->
-	<section id="portfolio" class="home-section text-center bg-dark">
+	<section id="portfolio" class="home-section text-center bg-dark portbk">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
@@ -216,8 +216,9 @@
 			<div class="row">
 				<div class="col-md-4 col-sm-6 portfolio-item">
 					<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-
-						<img src="img/works/topdog.png" class="img-responsive" alt="">
+						<div class="image">
+							<img src="img/works/topdog.png" class="img-responsive" alt="">
+						</div>
 					</a>
 					<div class="portfolio-caption">
 						<h4 id="spanishPortfolio3" class="text-red">Top Dog Daycare</h4>
@@ -226,8 +227,9 @@
 				</div>
 				<div class="col-md-4 col-sm-6 portfolio-item">
 					<a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-
-						<img src="img/works/spotyou.jpg" class="img-responsive" alt="">
+						<div class="image">
+							<img src="img/works/spotyou.jpg" class="img-responsive" alt="">
+						</div>
 					</a>
 					<div class="portfolio-caption">
 						<h4 id="spanishPortfolio5" class="text-red">Spot You</h4>
@@ -236,8 +238,9 @@
 				</div>
 				<div class="col-md-4 col-sm-6 portfolio-item">
 					<a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-
-						<img src="img/works/1.jpg" class="img-responsive" alt="">
+						<div class="image">
+							<img src="img/works/1.jpg" class="img-responsive" alt="">
+						</div>
 					</a>
 					<div class="portfolio-caption">
 						<h4 id="spanishPortfolio7" class="text-red">My Wedding Page</h4>
@@ -251,13 +254,13 @@
 
 
 	<!-- Section: ClientReviews -->
-	<section id="testimonials" class="home-section text-center bk">
+	<section id="testimonials" class="home-section text-center">
 		<div class="heading-contact">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-8 col-lg-offset-2">
 						<div class="wow bounceInDown" data-wow-delay="0.4s">
-							<div class="section-heading text-light">
+							<div class="section-heading">
 								<h2 id="spanishTestimonial1">Customer Testimonials</h2>
 								<i class="fa fa-2x fa-angle-down"></i>
 
@@ -275,31 +278,72 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-4">
-					
-					<div class="image">
-						<img src="img/review.png" class="img img-responsive full-width" />
-					</div>
+				
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12" data-wow-delay="0.2s">
+							<div class="carousel slide" data-ride="carousel" id="quote-carousel">
+								<!-- Bottom Carousel Indicators -->
+								<ol class="carousel-indicators">
+									<li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="">
+									</li>
+								<!--<li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/rssems/128.jpg" alt="">
+								</li>
+								<li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="">
+								</li>-->
+							</ol>
 
-					<h4>Susan Tompson</h4>
-					<h5>Top Dog Daycare</h5>
+							<!-- Carousel Slides / Quotes -->
+							<div class="carousel-inner text-center">
 
-				</div>
+								<!-- Quote 1 -->
+								<div class="item active">
+									<blockquote>
+										<div class="row">
+											<div class="col-sm-8 col-sm-offset-2">
 
-				<div class="col-lg-8">
-					<div class="row" id="box-search">
-						<div class="thumbnail text-center">
-							<img src="img/bubble2.png" alt="" class="img-responsive">
-							<div class="caption">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, quisquam?</p>
-							</div>
+												<p class="text-red">Great work by these fellas. All my clients have really enjoyed the new website. Its responsive, unique, and handles all my data. I really really recommend DevScheme especially to all the small businesses out there!</p>
+												<small class="text-light">Suzan Thompson, Top Dog Daycare</small> 
+
+											</div>
+										</div>
+									</blockquote>
+								</div>
+								<!-- Quote 2 -->
+								<!--
+								<div class="item">
+									<blockquote>
+										<div class="row">
+											<div class="col-sm-8 col-sm-offset-2">
+
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+												<small>Someone famous</small>
+											</div>
+										</div>
+									</blockquote>
+								</div>
+								
+								<div class="item">
+									<blockquote>
+										<div class="row">
+											<div class="col-sm-8 col-sm-offset-2">
+
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. .</p>
+												<small>Someone famous</small>
+											</div>
+										</div>
+									</blockquote>
+								</div>
+							</div>-->
+
+							<!-- Carousel Buttons Next/Prev -->
+							<!--<a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+							<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>-->
 						</div>
 					</div>
-					
 				</div>
+			</div>
 
-
-			</div>	
 
 		</div>
 	</section>
@@ -307,7 +351,7 @@
 
 
 	<!-- Section: team -->
-	<section id="team" class="home-section text-center bg-light">
+	<section id="team" class="home-section text-center bg-dark">
 		<div class="heading-about">
 			<div class="container">
 				<div class="row">
@@ -365,9 +409,8 @@
 	<!-- /Section: team -->
 
 
-
 	<!-- Section: about -->
-	<section id="about" class="home-section text-center">
+	<section id="about" class="home-section text-center bg-light">
 
 		<div class="heading-about">
 			<div class="container">
@@ -377,7 +420,6 @@
 							<div class="section-heading">
 								<h2 id="spanishAbout1">About Us</h2>
 								<i class="fa fa-2x fa-angle-down"></i>
-
 							</div>
 						</div>
 					</div>
@@ -412,7 +454,7 @@
 
 
 	<!-- Section: contact -->
-	<section id="contact" class="home-section text-center bg-dark">
+	<section id="contact" class="home-section text-center bk">
 		<div class="heading-contact">
 			<div class="container">
 				<div class="row">
@@ -435,7 +477,7 @@
 					<hr class="marginbot-50">
 				</div>
 			</div>
-			<div class="row">
+			<div class="row transparentbox">
 				<div class="col-lg-8">
 					<div class="boxed-trans">
 						<form id="contact-form">

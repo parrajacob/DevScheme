@@ -106,3 +106,6 @@
 #page-top > nav > div > div.collapse.navbar-collapse.navbar-right.navbar-main-collapse > ul > li:nth-child(n+1):active {
   background: white;
 }
+.transparentbox {
+  background-color: rgba(255, 255, 255, 0.3);
+}
