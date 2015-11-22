@@ -18,22 +18,15 @@
 
 <body>
     <div class="container">
-
         <div class="col-lg-6 full1 vcenter">
             <h1 class="text-center title whites maintitle">DevScheme</h1>
             <div class="text-center">
                 <img class="imgdev" src="img/logowhite.png" alt="" class="" />
             </div>
         </div>
-
-
         <div class="col-lg-6 full2 vcenter">
-
             <h3 id="hspanish">We offer monthly care plans to make sure your computing solution is functioning to your standards!</h3>
-
             <p id="pspanish">Enter your website domain below to authorize us to bill you for your monthly subscription.</p>
-
-
             <form class="form-signin">
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                     <input type="hidden" name="cmd" value="_s-xclick">
@@ -53,75 +46,76 @@
                     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                 </form>
             </form>
-        
         </div>
-
         <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-lg-12">
-                   
-                    <p>&copy;<span id="spanishFooter1">Copyright 2015 - DevScheme LLC.</span></p>
-                    
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <p>&copy;<span id="spanishFooter1">Copyright 2015 - DevScheme LLC.</span></p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
     </div>
     <!-- /container -->
-<script src="js/jquery.min.js"></script>
-<script src="js/sweetalert.min.js"></script>
-
-
-
+    <script src="js/jquery.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
     <script type="text/javascript">
- localStorage.removeItem("language"); // name is the key
+    
 
-    (function ($) {
-       
+    (function($) {
+        //localStorage.removeItem("language"); // name is the key
+        
+        var stored = localStorage.getItem("language");
+        console.log(stored);
 
-    var stored = localStorage.getItem("language");
-    console.log(stored);
+        if (stored == null) {
+            swal({
 
-    if(stored == null){
-        swal({   
+                    title: "Welcome to DevScheme.com",
+                    text: "Please confirm your language:",
+                    imageUrl: "img/logoblack.png",
+                    allowOutsideClick: true,
+                    showCancelButton: true,
+                    animation: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Español",
+                    cancelButtonColor: "#DD6B55",
+                    cancelButtonText: "English",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function(isConfirm) {
+                    if (isConfirm) {
+                        swal({
+                            title: "DevScheme",
+                            imageUrl: "img/logoblack.png",
+                            text: "Configurando a español",
+                            timer: 2000,
+                            showConfirmButton: false
+                        });
+                        localStorage.setItem("language", "Spanish"); //name is the key, GeekChamp is the value
+                        //toSpanish();
+                        document.getElementById("hspanish").innerHTML = "Ofrecemos planes de mantenimiento mensuales para asegurnos que su solución este funcionando a su expectativa!";
+                        document.getElementById("pspanish").innerHTML = "En la casilla ponga el dominio de su sitio web para que nosotros tengamos la autorizacion de facturarle su suscripción mensual.";
+                        document.getElementById("ispanish").innerHTML = "Ponga su sitio de web aqui:";
 
-            title: "Welcome to DevScheme.com",   
-            text: "Please confirm your language:",   
-            imageUrl: "img/logoblack.png", 
-            allowOutsideClick: true,
-            showCancelButton: true,
-            animation: true,   
-            confirmButtonColor: "#DD6B55",   
-            confirmButtonText: "Español",
-            cancelButtonColor: "#DD6B55",   
-            cancelButtonText: "English",   
-            closeOnConfirm: false,   
-            closeOnCancel: false 
-        }, 
-        function(isConfirm){  
-            if (isConfirm) {    
-                swal({   title: "DevScheme", imageUrl: "img/logoblack.png",  text: "Configurando a español",   timer: 2000,   showConfirmButton: false });  
-            localStorage.setItem("language", "Spanish"); //name is the key, GeekChamp is the value
-            //toSpanish();
-            document.getElementById("hspanish").innerHTML = "Ofrecemos planes de mantenimiento mensuales para asegurnos que su solución este funcionando a su expectativa!";
-            document.getElementById("pspanish").innerHTML = "En la casilla ponga el dominio de su sitio web para que nosotros tengamos la autorizacion de facturarle su suscripción mensual.";
-            document.getElementById("ispanish").innerHTML = "Ponga su sitio de web aqui:";
+                    } else {
+                        swal({
+                            title: "DevScheme",
+                            imageUrl: "img/logoblack.png",
+                            text: "Setting Language",
+                            timer: 200,
+                            showConfirmButton: false
+                        });
+                        localStorage.setItem("language", "English"); //name is the key, GeekChamp is the value
+                        //terminalanimation();
+                    }
 
-        } 
-        else 
-        {     
-            swal({   title: "DevScheme", imageUrl: "img/logoblack.png",  text: "Setting Language",   timer: 200,   showConfirmButton: false }); 
-        localStorage.setItem("language", "English"); //name is the key, GeekChamp is the value
-        //terminalanimation();
-    }
+                });
+        }
 
-    });
-}
-
-})(jQuery);
- 
-
+    })(jQuery);
     </script>
 </body>
 

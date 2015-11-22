@@ -108,7 +108,7 @@ footer {
   body {
     width: auto;
     display: block;
-    padding-top: 0;
+    padding-top: 10px;
     padding-bottom: 0;
     margin: 0;
     height: 100%;
@@ -140,7 +140,7 @@ body > div > div.col-lg-6.full2.vcenter > h3 {
 }
 
 .full2 {
-  padding-top: 20%;
+  padding-top: 17%;
 }
 
   }
