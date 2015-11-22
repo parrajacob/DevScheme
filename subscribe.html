@@ -47,25 +47,17 @@
                 </form>
             </form>
         </div>
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-lg-12">
-                        <p>&copy;<span id="spanishFooter1">Copyright 2015 - DevScheme LLC.</span></p>
-                    </div>
-                </div>
-            </div>
+        <footer class="footer">
+            <p>&copy;<span id="spanishFooter1">Copyright 2015 - DevScheme LLC.</span></p>
         </footer>
     </div>
     <!-- /container -->
     <script src="js/jquery.min.js"></script>
     <script src="js/sweetalert.min.js"></script>
     <script type="text/javascript">
-    
-
     (function($) {
         //localStorage.removeItem("language"); // name is the key
-        
+
         var stored = localStorage.getItem("language");
         console.log(stored);
 
@@ -91,7 +83,7 @@
                             title: "DevScheme",
                             imageUrl: "img/logoblack.png",
                             text: "Configurando a español",
-                            timer: 2000,
+                            timer: 1000,
                             showConfirmButton: false
                         });
                         localStorage.setItem("language", "Spanish"); //name is the key, GeekChamp is the value
@@ -99,6 +91,8 @@
                         document.getElementById("hspanish").innerHTML = "Ofrecemos planes de mantenimiento mensuales para asegurnos que su solución este funcionando a su expectativa!";
                         document.getElementById("pspanish").innerHTML = "En la casilla ponga el dominio de su sitio web para que nosotros tengamos la autorizacion de facturarle su suscripción mensual.";
                         document.getElementById("ispanish").innerHTML = "Ponga su sitio de web aqui:";
+                        document.getElementById("spanishFooter1").innerHTML = "Derechos de Autor 2015 - DevScheme LLC.";
+
 
                     } else {
                         swal({
